@@ -37,70 +37,12 @@ section {
     background-position: center; */
 }
 
-header {
-    position: relative;
-    top: 0;
-    width: 100%;
-    padding: 30px 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 
-header .logo {
-    position: relative;
-    color: #000;
-    font-size: 30px;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: 800;
-    letter-spacing: 1px;
-    padding: 2px 0 2px 0;
-    border-radius: 20px;
-    margin-left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: white;
-}
 
-header .logo img {
-    width: 40px;
-    height: 40px;
-}
-
-header .navigation a {
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    padding: 2px 15px;
-    border-radius: 20px;
-    transition: 0.3s;
-    transition-property: background;
-}
-
-header .navigation a:not(:last-child) {
-    margin-right: 30px;
-}
-
-header .navigation a:hover {
-    background-color: #fff;
-    color: black;
-}
-
-.content {
-    /* max-width: 650px; */
-    margin: 20px 100px;
-    /* display: grid;
-    grid-template-columns: 1fr 1fr; */
-}
 
 .content .info h2 {
     color: #226A80;
-    font-size: 45px;
+    font-size: 28px;
     text-transform: uppercase;
     font-weight: 800;
     letter-spacing: 2px;
@@ -504,6 +446,7 @@ label .close-btn {
 
     .content {
         margin: 20px 80px;
+ 
     }
 
     .swiper-context>div {
@@ -522,11 +465,12 @@ label .close-btn {
     }
 
     .content {
-        margin: 20px 20px;
+        margin-left: 20px;
+        margin-right: 20px;
     }
 
     .content .info h2 {
-        font-size: 40px;
+        font-size: 20px;
     }
      
     .content .info h2 span {
@@ -551,11 +495,12 @@ label .close-btn {
     }
 
     .content {
-        margin: 20px 20px;
+        margin-left: 20px;
+        margin-right: 20px;
     }
 
     .content .info h2 {
-        font-size: 40px;
+        font-size: 20px;
     }
 
     .content .info h2 span {

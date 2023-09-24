@@ -14,6 +14,13 @@
 
 <body>
     <div class="container">
+        <!-- <div class="list-message" th:if=$"{message}">
+            <ul>
+                <div class="message">
+                    <span>th:text="${message}"</span>
+                </div>
+            </ul>
+        </div> -->
         <section>
             <input type="checkbox" id="check">
             <header>
@@ -49,3 +56,25 @@
 </body>
 
 </html>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        showMessageEventLoad()
+    });
+    function showMessageEventLoad() {
+        const message = document.querySelectorAll(".message");
+        message.forEach(function (message, index) {
+            setTimeout(function () {
+                message.style.opacity = "1"; // Rõ dần
+                message.style.transform = "translateX(0)"; // Xuất hiện từ phải sang
+                setTimeout(function () {
+                    message.style.opacity = "0"; // Mờ dần
+                    message.style.transform = "translateX(100%)"; // Biến mất vào lề bên phải
+                    setTimeout(function () {
+                        message.style.display = "none"; // Biến mất hoàn toàn
+                    }, 1000); // Thời gian mờ dần
+                }, 4000); // Thời gian hiển thị
+            }, index * 300); // Thời gian delay
+        });
+    }
+
+</script>

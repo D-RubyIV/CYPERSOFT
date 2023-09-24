@@ -2,7 +2,6 @@
 <html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:th="http://www.thymeleaf.org" layout:decorate="~{base.html}">
 
 
-
 <head>
     <link rel="stylesheet" th:href="@{/css/login.css}" href="..\static\css\login.css" type="text/css">
 </head>
@@ -21,6 +20,9 @@
                 </div>
                 <div class="mb-4">
                     <input id="password" type="password" name="password" autocomplete="off" placeholder="Your Password">
+                </div>
+                <div th:if="${param.error}" class="error">
+                    Invalid username or password
                 </div>
                 <div>
                     <input type="submit" value="Login">
