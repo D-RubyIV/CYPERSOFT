@@ -57,9 +57,9 @@ section {
 }
 
 .content .info p {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 500;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
 }
 
 .content .info-btn {
@@ -271,7 +271,6 @@ label .close-btn {
 .swiper h3{
     text-align: center;
     color: white;
-    padding-bottom: 15px;
 }
 
 
@@ -281,7 +280,7 @@ label .close-btn {
 }
 
 .swiper-context>div {
-    margin-inline: 60px
+    margin-inline: 60px;
 }
 
 .swiper-slide img {
@@ -291,24 +290,7 @@ label .close-btn {
     object-fit: cover;
 }
 
-/* .swiper-wrapper{
-    display: flex;
-    overflow: auto;
-    justify-content: space-evenly;
-    scroll-behavior: smooth;
-    scroll-snap-type: both;
-}
-.swiper-wrapper::-webkit-scrollbar{
-    display: none;
-}
 
-.swiper-slide {
-    padding: 0 10px;
-    min-width: 200px;
-    scroll-snap-align: center;
-    opacity: 0.9;
-}
-*/
 .card__image {
     position: relative;
     background-color: var(--first-color-light);
@@ -327,8 +309,8 @@ label .close-btn {
 
 .card__data {
     background-color: var(--container-color);
-    padding: 1rem 1.5rem;
-    border-radius: 1rem;
+    padding: 8px 5px;
+    border-radius: 8px;
     text-align: center;
     position: relative;
     z-index: 10;
@@ -357,15 +339,15 @@ label .close-btn {
 .card__name {
     font-size: var(--h2-font-size);
     color: var(--second-color);
-    margin-bottom: .75rem;
+    margin-bottom: 5px;
 }
 
 .card__description {
     font-weight: 500;
-    margin-bottom: 1.75rem;
 }
 
 .card__button {
+    width: 100%;
     display: inline-block;
     background-color: var(--first-color);
     padding: 10px 10px;
@@ -435,19 +417,12 @@ label .close-btn {
     }
 }
 
-@media screen and (max-width: 768) {
-    header {
-        padding: 30px 80px;
-    }
-
+@media screen and (max-width: 768px) {
+ 
     header .navigation {
         display: none;
     }
 
-    .content {
-        margin: 20px 80px;
- 
-    }
 
     .swiper-context>div {
         margin-inline: 10px
@@ -456,17 +431,10 @@ label .close-btn {
 }
 
 @media screen and (max-width: 540px) {
-    header {
-        padding: 30px 20px;
-    }
+
 
     header .navigation {
         display: none;
-    }
-
-    .content {
-        margin-left: 20px;
-        margin-right: 20px;
     }
 
     .content .info h2 {
@@ -478,7 +446,7 @@ label .close-btn {
     }
 
     .swiper-context>div {
-        margin-inline: 10px;
+        margin-inline: 5px;
     }
     .autoplay-progress {
         display: none;
@@ -486,17 +454,18 @@ label .close-btn {
 }
 
 @media screen and (max-width: 400px) {
-    header {
-        padding: 30px 20px;
-    }
 
     header .navigation {
         display: none;
     }
-
-    .content {
-        margin-left: 20px;
-        margin-right: 20px;
+    
+    .card__image {
+        position: relative;
+        background-color: var(--first-color-light);
+        padding-top: 0.7rem;
+        margin-bottom: -.75rem;
+        text-align: center;
+        border-radius: 10px;
     }
 
     .content .info h2 {
@@ -508,6 +477,11 @@ label .close-btn {
     }
 
     .swiper-context>div {
-        margin-inline: 5px;
+        margin-inline: 0px;
     }
+    .content .info p {
+        font-size: 13px;
+    }
+
+
 }
