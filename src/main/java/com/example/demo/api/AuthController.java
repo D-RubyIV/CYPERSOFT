@@ -1,6 +1,7 @@
 package com.example.demo.api;
 
-import com.example.demo.dto.auth.AuthDto;
+import com.example.demo.dto.auth.ChangeAuthDto;
+import com.example.demo.dto.auth.LoginAuthDto;
 import com.example.demo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -18,10 +19,13 @@ public class AuthController {
     private UserService userService;
 
     @PostMapping("/login")
-    public ResponseEntity<?> login(@Validated @RequestBody AuthDto authDto){
-        System.out.println("OK");
+    public ResponseEntity<?> login(@Validated @RequestBody LoginAuthDto dto){
+        return userService.loginAuth(dto);
+    }
 
-        return userService.checkAuth(authDto);
+     @PostMapping("/change")
+    public ResponseEntity<?> login(@Validated @RequestBody ChangeAuthDto dto){
+        return userService.changeAuth(dto);
     }
 
 }

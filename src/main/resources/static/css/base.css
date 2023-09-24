@@ -1,0 +1,25 @@
+a {
+    text-decoration: none;
+}
+
+body {
+    background: #3a3b3c;
+}
+
+.container {
+    max-width: 1500px;
+    width: 100%;
+    margin: auto;
+    background-image: url("../images/Blue & Black Futuristic Technology Facebook Cover.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    max-width: 1500px;
+    width: 100%;
+    margin: auto;
+    background-image: url("../images/Blue & Black Futuristic Technology Facebook Cover.png");
+    background-size: cover;
+    background-position: center;
+}

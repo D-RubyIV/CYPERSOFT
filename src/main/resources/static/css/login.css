@@ -1,0 +1,83 @@
+.content{
+    margin: auto;
+}
+
+.content {
+    position: absolute;
+    max-width: 500px;
+    width: 95%;
+    min-width: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 auto; /* Canh giữa nội dung */
+    padding: 30px 60px; /* Khoảng cách trong nội dung */
+    background-color: rgba(1, 28, 37, 0.8);; /* Màu nền cho nội dung */
+    border-radius: 8px; /* Bo tròn góc cho nội dung */
+}
+h2 {
+    color: #ffffff; /* Màu chữ cho tiêu đề */
+    text-align: center;
+}
+label {
+    color: #ffffff; /* Màu chữ cho nhãn */
+    font-size: 14px;
+}
+span{
+    color:  #8fe7ff;
+    font-size: 15px;
+}
+.mb-4{
+    margin-top: 10px;
+}
+.top-content-login{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0 0 0;
+}
+.create-account{
+    text-align: center;
+}
+input{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid #8fe7ff;
+    color: #8fe7ff;
+}
+a{
+    font-size: 14px;
+}
+p{
+    color: white;
+    font-size: 14px;
+}
+input[type="text"],
+input[type="password"] {
+    border-radius: 4px; /* Bo tròn góc cho ô input */
+    padding: 10px; /* Khoảng cách trong ô input */
+    margin-bottom: 10px; /* Khoảng cách giữa các ô input */
+}
+input[type="submit"] {
+    background-color: #007bff; /* Màu nền cho nút submit */
+    color: #ffffff; /* Màu chữ trong nút submit */
+    border: none; /* Loại bỏ viền nút submit */
+    border-radius: 4px; /* Bo tròn góc cho nút submit */
+    padding: 10px 20px; /* Kích thước nút submit */
+    cursor: pointer; /* Biểu tượng con trỏ khi di chuột vào nút */
+}
+input[type="submit"]:hover {
+    background-color: #0056b3; /* Màu nền khi di chuột vào nút submit */
+}
+a {
+    color: #007bff; /* Màu chữ cho liên kết */
+    text-decoration: none; /* Loại bỏ gạch chân cho liên kết */
+}
+
+a:hover {
+    text-decoration: underline; /* Gạch chân khi di chuột vào liên kết */
+}
+.media-icons{
+    display: none;
+}
+
+

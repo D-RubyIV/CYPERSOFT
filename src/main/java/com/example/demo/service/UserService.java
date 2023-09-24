@@ -1,7 +1,8 @@
 package com.example.demo.service;
 
 import com.example.demo.config.jwt.JwtService;
-import com.example.demo.dto.auth.AuthDto;
+import com.example.demo.dto.auth.LoginAuthDto;
+import com.example.demo.dto.auth.ChangeAuthDto;
 import com.example.demo.exception.CustomException;
 import com.example.demo.model.UserEntity;
 import com.example.demo.repository.UserRepository;
@@ -27,7 +28,7 @@ public class UserService {
     private JwtService jwtService;
 
 
-    public ResponseEntity<?> checkAuth(AuthDto authDto) {
+    public ResponseEntity<?> loginAuth(LoginAuthDto authDto) {
         UserEntity userEntity = userRepository.findByUsername(authDto.getUsername());
         if (userEntity == null) {
             throw new CustomException.BadRequestException("Username not found");
@@ -41,6 +42,22 @@ public class UserService {
         mapToken.put("AccessToken", accessToken);
         mapToken.put("RefreshToken", refreshToken);
         return new ResponseEntity<>(mapToken, HttpStatus.OK);
+
+    }
+
+    public ResponseEntity<?> changeAuth(ChangeAuthDto changePassAuthDto){
+        UserEntity userEntity = userRepository.findByUsername(changePassAuthDto.getUsername());
+        if(userEntity == null){
+            throw new CustomException.BadRequestException("Username not found");
+        }
+        if (!(passwordEncoder.matches(changePassAuthDto.getPassword(), userEntity.getPassword()))) {
+            throw new CustomException.BadRequestException("Password not correct");
+        }
+        userEntity.setPassword(passwordEncoder.encode(changePassAuthDto.getNewpassword()));
+        userRepository.save(userEntity);
+        Map<String, String> map = new HashMap<>();
+        map.put("message", "Password has been changed");
+        return new ResponseEntity<>(map, HttpStatus.OK);
 
     }
 

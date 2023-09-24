@@ -1,235 +1,193 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/88cd9f507c.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" th:href="@{/css/home.css}" href="..\static\css\home.css" type="text/css">
-    <link rel="icon" href="..\static\images\logo.png" th:href="@{/images/logo.png}">
-    <!-- Link Swiper's CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-
-    <title>CYPERSOFT - BY DION</title>
-</head>
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{base.html}">
 
 <body>
-    <div class="container">
-        <section>
-            <input type="checkbox" id="check">
-            <header>
-                <div>
-                    <h2><a href="#" class="logo"><img src="..\static\images\logo.png" th:src="@{/images/logo.png}"
-                                alt="">CYPERSOFT</a></h2>
-                </div>
-                <div class="navigation">
-                    <a href="#">Home</a>
-                    <a href="#">About</a>
-                    <a href="#">Info</a>
-                    <a href="#">Service</a>
-                    <a href="#">Contact</a>
-                </div>
-                <div>
-                    <label for="check">
-                        <i class="fas fa-bars menu-btn"></i>
-                        <i class="fas fa-times close-btn"></i>
-                    </label>
-                </div>
 
-            </header>
-            <div class="content">
-                <div class="info">
-                    <h2>Loading 10%...</h2>
-                    <div class="top-first-content">
-                        <h3>BY DION</h3>
-                        <div class="account-action">
-                            <div><a href="#"><i class="fa-solid fa-arrow-right-to-bracket"></i>Login</a></div>
-                            <div><a href="#"><i class="fa-regular fa-clock"></i>Free Trial</a></div>
-                        </div>
-                        <div class="bottom-content">
-                            <div>
-                                <b>Easy to use</b>
-                                <img src="..\static\images\dddd.gif" th:src="@{/images/dddd.gif}" alt="">
-                                <span>Our vast workforce and premium infrastructure allow us to provide a highly
-                                    reliable 24/7/365 service</span>
-                            </div>
-                            <div>
-                                <b>Support 24/7</b>
-                                <img src="..\static\images\cccc.gif" th:src="@{/images/cccc.gif}" alt="">
-                                <span>Can be easily integrated with any programs and scripts which require captcha
-                                    recognition.</span>
-                            </div>
-                        </div>
+    <div class="content" layout:fragment="content">
+        <div class="info">
+            <h2>Loading 10%...</h2>
+            <div class="top-first-content">
+                <h3>BY DION</h3>
+                <div class="account-action">
+                    <div><a href="/login"><i class="fa-solid fa-arrow-right-to-bracket"></i>Login</a></div>
+                    <div><a href="#"><i class="fa-regular fa-clock"></i>Free Trial</a></div>
+                </div>
+                <div class="bottom-content">
+                    <div>
+                        <b>Easy to use</b>
+                        <img src="..\static\images\dddd.gif" th:src="@{/images/dddd.gif}" alt="">
+                        <span>Our vast workforce and premium infrastructure allow us to provide a highly
+                            reliable 24/7/365 service</span>
                     </div>
-                    <p class="welcome-content">Welcome to the leading software rental service. We provide a variety of
-                        software solutions to meet all your business needs. With our flexibility and efficiency, you'll
-                        save significant time and resources.</p>
-                 
-                    <div class="swiper mySwiper">
-                        <h3>OUR PRODUCT</h3>
-                        <div class="swiper-wrapper">
-
-                            <div class="swiper-slide">
-                                <div class="swiper-context">
-                                    <div class="card__image">
-                                        <img src="..\static\images\zyro-image.ico" th:src="@{/images/zyro-image.ico}"
-                                            alt="image" class="card__img">
-
-                                    </div>
-                                    <div class="card__shadow"></div>
-                                    <div class="card__data">
-                                        <h3 class="card__name">Lexa Kin</h3>
-                                        <p class="card__description">
-                                            Passionate about development and design,
-                                            I carry out projects at the request of users.
-                                        </p>
-                                        <a href="#" class="card__button">View More</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <div class="swiper-context">
-                                    <div class="card__image">
-                                        <img src="..\static\images\zyro-image.ico" th:src="@{/images/zyro-image.ico}"
-                                            alt="image" class="card__img">
-
-                                    </div>
-                                    <div class="card__shadow"></div>
-                                    <div class="card__data">
-                                        <h3 class="card__name">Lexa Kin</h3>
-                                        <p class="card__description">
-                                            Passionate about development and design,
-                                            I carry out projects at the request of users.
-                                        </p>
-                                        <a href="#" class="card__button">View More</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <div class="swiper-context">
-                                    <div class="card__image">
-                                        <img src="..\static\images\zyro-image.ico" th:src="@{/images/zyro-image.ico}"
-                                            alt="image" class="card__img">
-
-                                    </div>
-                                    <div class="card__shadow"></div>
-                                    <div class="card__data">
-                                        <h3 class="card__name">Lexa Kin</h3>
-                                        <p class="card__description">
-                                            Passionate about development and design,
-                                            I carry out projects at the request of users.
-                                        </p>
-                                        <a href="#" class="card__button">View More</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <div class="swiper-context">
-                                    <div class="card__image">
-                                        <img src="..\static\images\zyro-image.ico" th:src="@{/images/zyro-image.ico}"
-                                            alt="image" class="card__img">
-
-                                    </div>
-                                    <div class="card__shadow"></div>
-                                    <div class="card__data">
-                                        <h3 class="card__name">Lexa Kin</h3>
-                                        <p class="card__description">
-                                            Passionate about development and design,
-                                            I carry out projects at the request of users.
-                                        </p>
-                                        <a href="#" class="card__button">View More</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <div class="swiper-context">
-                                    <div class="card__image">
-                                        <img src="..\static\images\zyro-image.ico" th:src="@{/images/zyro-image.ico}"
-                                            alt="image" class="card__img">
-
-                                    </div>
-                                    <div class="card__shadow"></div>
-                                    <div class="card__data">
-                                        <h3 class="card__name">Lexa Kin</h3>
-                                        <p class="card__description">
-                                            Passionate about development and design,
-                                            I carry out projects at the request of users.
-                                        </p>
-                                        <a href="#" class="card__button">View More</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <div class="swiper-context">
-                                    <div class="card__image">
-                                        <img src="..\static\images\zyro-image.ico" th:src="@{/images/zyro-image.ico}"
-                                            alt="image" class="card__img">
-
-                                    </div>
-                                    <div class="card__shadow"></div>
-                                    <div class="card__data">
-                                        <h3 class="card__name">Lexa Kin</h3>
-                                        <p class="card__description">
-                                            Passionate about development and design,
-                                            I carry out projects at the request of users.
-                                        </p>
-                                        <a href="#" class="card__button">View More</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <div class="swiper-context">
-                                    <div class="card__image">
-                                        <img src="..\static\images\zyro-image.ico" th:src="@{/images/zyro-image.ico}"
-                                            alt="image" class="card__img">
-
-                                    </div>
-                                    <div class="card__shadow"></div>
-                                    <div class="card__data">
-                                        <h3 class="card__name">Lexa Kin</h3>
-                                        <p class="card__description">
-                                            Passionate about development and design,
-                                            I carry out projects at the request of users.
-                                        </p>
-                                        <a href="#" class="card__button">View More</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="swiper-button-next">
-                            <i class="ri-arrow-right-s-line"></i>
-                        </div>
-
-                        <div class="swiper-button-prev">
-                            <i class="ri-arrow-left-s-line"></i>
-                        </div>
-                        <div class="swiper-pagination"></div>
-                        <div class="autoplay-progress">
-                            <svg viewBox="0 0 48 48">
-                                <circle cx="24" cy="24" r="20"></circle>
-                            </svg>
-                            <span></span>
-                        </div>
-                    </div>
-                    <div class="bottom-four-content">
-                        <a href="#" class="info-btn">More Info</a>
+                    <div>
+                        <b>Support 24/7</b>
+                        <img src="..\static\images\cccc.gif" th:src="@{/images/cccc.gif}" alt="">
+                        <span>Can be easily integrated with any programs and scripts which require captcha
+                            recognition.</span>
                     </div>
                 </div>
             </div>
-            <div class="media-icons">
-                <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-            </div>
-        </section>
+            <p class="welcome-content">Welcome to the leading software rental service. We provide a variety of
+                software solutions to meet all your business needs. With our flexibility and efficiency, you'll
+                save significant time and resources.</p>
 
+            <div class="swiper mySwiper">
+                <h3>OUR PRODUCT</h3>
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <div class="swiper-context">
+                            <div class="card__image">
+                                <img src="..\static\images\zyro-image.ico" th:src="@{/images/zyro-image.ico}"
+                                    alt="image" class="card__img">
+
+                            </div>
+                            <div class="card__shadow"></div>
+                            <div class="card__data">
+                                <h3 class="card__name">Lexa Kin</h3>
+                                <p class="card__description">
+                                    Passionate about development and design,
+                                    I carry out projects at the request of users.
+                                </p>
+                                <a href="#" class="card__button">View More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="swiper-context">
+                            <div class="card__image">
+                                <img src="..\static\images\zyro-image.ico" th:src="@{/images/zyro-image.ico}"
+                                    alt="image" class="card__img">
+
+                            </div>
+                            <div class="card__shadow"></div>
+                            <div class="card__data">
+                                <h3 class="card__name">Lexa Kin</h3>
+                                <p class="card__description">
+                                    Passionate about development and design,
+                                    I carry out projects at the request of users.
+                                </p>
+                                <a href="#" class="card__button">View More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="swiper-context">
+                            <div class="card__image">
+                                <img src="..\static\images\zyro-image.ico" th:src="@{/images/zyro-image.ico}"
+                                    alt="image" class="card__img">
+
+                            </div>
+                            <div class="card__shadow"></div>
+                            <div class="card__data">
+                                <h3 class="card__name">Lexa Kin</h3>
+                                <p class="card__description">
+                                    Passionate about development and design,
+                                    I carry out projects at the request of users.
+                                </p>
+                                <a href="#" class="card__button">View More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="swiper-context">
+                            <div class="card__image">
+                                <img src="..\static\images\zyro-image.ico" th:src="@{/images/zyro-image.ico}"
+                                    alt="image" class="card__img">
+
+                            </div>
+                            <div class="card__shadow"></div>
+                            <div class="card__data">
+                                <h3 class="card__name">Lexa Kin</h3>
+                                <p class="card__description">
+                                    Passionate about development and design,
+                                    I carry out projects at the request of users.
+                                </p>
+                                <a href="#" class="card__button">View More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="swiper-context">
+                            <div class="card__image">
+                                <img src="..\static\images\zyro-image.ico" th:src="@{/images/zyro-image.ico}"
+                                    alt="image" class="card__img">
+
+                            </div>
+                            <div class="card__shadow"></div>
+                            <div class="card__data">
+                                <h3 class="card__name">Lexa Kin</h3>
+                                <p class="card__description">
+                                    Passionate about development and design,
+                                    I carry out projects at the request of users.
+                                </p>
+                                <a href="#" class="card__button">View More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="swiper-context">
+                            <div class="card__image">
+                                <img src="..\static\images\zyro-image.ico" th:src="@{/images/zyro-image.ico}"
+                                    alt="image" class="card__img">
+
+                            </div>
+                            <div class="card__shadow"></div>
+                            <div class="card__data">
+                                <h3 class="card__name">Lexa Kin</h3>
+                                <p class="card__description">
+                                    Passionate about development and design,
+                                    I carry out projects at the request of users.
+                                </p>
+                                <a href="#" class="card__button">View More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="swiper-context">
+                            <div class="card__image">
+                                <img src="..\static\images\zyro-image.ico" th:src="@{/images/zyro-image.ico}"
+                                    alt="image" class="card__img">
+
+                            </div>
+                            <div class="card__shadow"></div>
+                            <div class="card__data">
+                                <h3 class="card__name">Lexa Kin</h3>
+                                <p class="card__description">
+                                    Passionate about development and design,
+                                    I carry out projects at the request of users.
+                                </p>
+                                <a href="#" class="card__button">View More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="swiper-button-next">
+                    <i class="ri-arrow-right-s-line"></i>
+                </div>
+
+                <div class="swiper-button-prev">
+                    <i class="ri-arrow-left-s-line"></i>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="autoplay-progress">
+                    <svg viewBox="0 0 48 48">
+                        <circle cx="24" cy="24" r="20"></circle>
+                    </svg>
+                    <span></span>
+                </div>
+            </div>
+            <div class="bottom-four-content">
+                <a href="#" class="info-btn">More Info</a>
+            </div>
+        </div>
     </div>
 </body>
 
@@ -269,7 +227,7 @@
         },
 
         breakpoints: {
-        
+
             650: {
                 slidesPerView: 2,
             },

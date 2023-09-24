@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="..\static\images\logo.png" th:href="@{/images/logo.png}">
+    <title>JASPERSOFT - BY DION</title>
+    <script src="https://kit.fontawesome.com/88cd9f507c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" th:href="@{/css/base.css}" href="..\static\css\base.css" type="text/css">
+    <link rel="stylesheet" th:href="@{/css/home.css}" href="..\static\css\home.css" type="text/css">
+</head>
+
+<body>
+    <div class="container">
+        <section>
+            <input type="checkbox" id="check">
+            <header>
+                <div>
+                    <h2><a href="#" class="logo"><img src="..\static\images\logo.png" th:src="@{/images/logo.png}"
+                                alt="">CYPERSOFT</a></h2>
+                </div>
+                <div class="navigation">
+                    <a href="#">Home</a>
+                    <a href="#">About</a>
+                    <a href="#">Info</a>
+                    <a href="#">Service</a>
+                    <a href="#">Contact</a>
+                </div>
+                <div>
+                    <label for="check">
+                        <i class="fas fa-bars menu-btn"></i>
+                        <i class="fas fa-times close-btn"></i>
+                    </label>
+                </div>
+            </header>
+            <div class="content" layout:fragment="content">
+
+            </div>
+            <div class="media-icons">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </section>
+
+    </div>
+</body>
+
+</html>

@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class AuthDto {
+public class LoginAuthDto {
     @NotBlank(message = "username is required")
     private String username;
 

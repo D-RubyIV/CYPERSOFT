@@ -12,10 +12,8 @@ import org.springframework.context.annotation.ComponentScan;
                 "com.example.demo.config",
                 "com.example.demo.exception",
                 "com.example.demo.model",
-                "com.example.demo.service",
                 "com.example.demo.repository",
                 "com.example.demo"
-
         })
 public class DemoApplication {
 
