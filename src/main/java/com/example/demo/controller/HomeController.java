@@ -34,6 +34,10 @@ public class HomeController {
     public String getLogin(){
         return "login";
     }
+    @GetMapping("/dashboard")
+    public String getDashboard(){
+        return "dashboard";
+    }
 
 
 }

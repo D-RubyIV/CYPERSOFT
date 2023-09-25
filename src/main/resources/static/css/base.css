@@ -1,29 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    padding-block: 0;
+    padding-inline: 0;
+    box-sizing: border-box;
+}
 a {
     text-decoration: none;
 }
 
 body {
     background: #3a3b3c;
-}
-
-.container {
-    max-width: 1500px;
-    width: 100%;
-    margin: auto;
     background-image: url("../images/Blue & Black Futuristic Technology Facebook Cover.png");
     background-size: cover;
     background-position: center;
 }
-
 .container {
     max-width: 1500px;
     width: 100%;
     margin: auto;
-    background-image: url("../images/Blue & Black Futuristic Technology Facebook Cover.png");
-    background-size: cover;
-    background-position: center;
+    position: relative;
+}
+section {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+#check {
+    z-index: 2;
+}
+#check {
+    display: none;
+    position: absolute;
 }
 
+.btn-menu-label {
+    display: none;
+    /* position: absolute; */
+    top: 36px;
+    z-index: 3;
+}
+
+.btn-menu-label {
+    display: block;
+    font-size: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+    transition-property: color;
+}
+
+.btn-menu-label:hover {
+    color: #fff;
+}
+
+.btn-menu-label .close-btn {
+    display: none;
+}
+#check:checked~header .navigation {
+    z-index: 6;
+    position: fixed;
+    background-color: green;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#check:checked~header .navigation a {
+    font-weight: 700;
+    margin-right: 0;
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+}
+#check:checked~header label .menu-btn {
+    display: none;
+}
+#check:checked~header label .close-btn {
+    position: relative;
+    display: block;
+    z-index: 7;
+}
 
 .list-message{
     position: fixed;
@@ -121,16 +182,10 @@ header .navigation a:hover {
     header .navigation {
         display: none;
     }
-
     .content {
         margin-left: 50px;
         margin-right: 50px;
     }
-
-    .swiper-context>div {
-        margin-inline: 10px
-    }
-
 }
 
 @media screen and (max-width: 540px) {

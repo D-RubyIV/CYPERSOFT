@@ -13,156 +13,9 @@
     --h2-font-size: 1.25rem;
     --normal-font-size: 1rem;
 }
-
-.content .info h2 {
-    color: #226A80;
-    font-size: 28px;
-    text-transform: uppercase;
-    font-weight: 800;
-    letter-spacing: 2px;
-    /* KC giữa các chữ */
-    line-height: 60px;
+.content{
+    margin-top: 100px;
 }
-
-.content .info h2 span {
-    color: #fff;
-    font-size: 40px;
-    font-weight: 800;
-}
-
-.content .info p {
-    font-size: 14px;
-    font-weight: 500;
-    margin-bottom: 10px;
-}
-
-.content .info-btn {
-    color: #fff;
-    background-color: #226A80;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: 2px;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: 0.3s;
-    transition-property: background;
-}
-
-.content .info-btn:hover {
-    background-color: #0C4F60;
-}
-
-.media-icons {
-    padding: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-}
-
-.media-icons a {
-    position: relative;
-    color: white;
-    font-size: 25px;
-    transition: 0.3s;
-    transition-property: transform;
-}
-
-.media-icons a:not(:last-child) {
-    margin-right: 60px;
-}
-
-.media-icons a:hover {
-    transform: scale(1.5);
-}
-
-.bottom-four-content {
-    margin-top: 20px;
-}
-
-
-
-.welcome-content {
-    padding: 20px 0;
-    overflow-wrap: break-word;
-    color: #3affe7;
-}
-
-
-.top-first-content {
-    display: flex;
-    /* Sử dụng display: flex để căn giữa theo chiều dọc và ngang */
-    flex-direction: column;
-    /* Đặt flex-direction thành column để căn giữa the các phần tử dọc */
-    justify-content: center;
-    /* Căn giữa theo chiều dọc */
-    align-items: center;
-    /* Căn giữa theo chiều ngang */
-    background-color: rgba(1, 28, 37, 0.8);
-    color: white;
-    padding: 10px 0;
-    border-radius: 8px;
-}
-
-.top-first-content h3 {
-    padding-bottom: 5px;
-}
-
-.top-first-content .account-action {
-    display: flex;
-    justify-content: center;
-}
-
-.top-first-content .account-action>div {
-    width: 120px;
-    background-color: #3affe7;
-    margin-top: 5px;
-    padding: 5px 10px;
-    border-radius: 5px;
-    margin: 10px;
-    text-align: center;
-    font-size: 14px;
-}
-
-.top-first-content .account-action a {
-    color: black;
-    text-decoration: none;
-}
-
-.top-first-content .account-action i {
-    margin-right: 5px;
-
-}
-
-/*  */
-
-
-.bottom-content {
-    color: white;
-    display: flex;
-    justify-content: space-evenly;
-}
-.bottom-content>div {
-    width: 150px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-.bottom-content img {
-    width: 50px;
-    height: 50px;
-}
-.bottom-content span {
-    font-size: 12px;
-    text-align: center;
-
-}
-
-
-/* INFO */
-
 .swiper {
     width: 100%;
     height: 100%;
@@ -170,7 +23,8 @@
     scroll-snap-type: both;
     transform: none;
 }
-.swiper h3{
+
+.swiper h3 {
     text-align: center;
     color: white;
 }
@@ -258,9 +112,11 @@
     font-weight: 600;
     font-size: 11px;
 }
-.swiper-pagination span{
+
+.swiper-pagination span {
     background-color: white;
 }
+
 .autoplay-progress {
     position: absolute;
     right: 16px;
@@ -274,7 +130,8 @@
     font-weight: bold;
     color: var(--swiper-theme-color);
 }
-.autoplay-progress span{
+
+.autoplay-progress span {
     color: white;
 }
 
@@ -295,7 +152,9 @@
     transform: rotate(-90deg);
 }
 
-
+.media-icons {
+    display: none;
+}
 
 /*  */
 @media screen and (max-width: 1800px) {
@@ -382,6 +241,9 @@
         margin-inline: 0px;
     }
     .content .info p {
+        font-size: 13px;
+    }
+    .card__description{
         font-size: 13px;
     }
 
