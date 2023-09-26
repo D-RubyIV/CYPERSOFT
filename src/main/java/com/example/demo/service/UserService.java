@@ -2,7 +2,7 @@ package com.example.demo.service;
 
 import com.example.demo.config.jwt.JwtService;
 import com.example.demo.dto.auth.BearerTokenDto;
-import com.example.demo.dto.auth.LoginAuthDto;
+import com.example.demo.dto.auth.SigninAuthDto;
 import com.example.demo.dto.auth.ChangeAuthDto;
 import com.example.demo.dto.response.MapResponseDto;
 import com.example.demo.exception.CustomException;
@@ -30,7 +30,7 @@ public class UserService {
         this.jwtService = jwtService;
     }
 
-    public MapResponseDto loginAuth(LoginAuthDto authDto) {
+    public MapResponseDto loginAuth(SigninAuthDto authDto) {
         UserEntity userEntity = userRepository.findByUsername(authDto.getUsername());
         if (userEntity == null) {
             throw new CustomException.BadRequestException("Username not found");

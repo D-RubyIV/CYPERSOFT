@@ -1,6 +1,7 @@
 .content {
     padding: 30px 60px; /* Khoảng cách trong nội dung */
-    width: calc(90% - 120px);
+    /* width: calc(90% - 120px); */
+    width: 90%;
     position: absolute;
     max-width: 500px;
     min-width: 300px;
@@ -40,21 +41,23 @@ span{
     justify-content: space-between;
     padding: 20px 0 0 0;
 }
-.create-account{
+.extend-account{
+    margin-top: 5px;
     text-align: center;
 }
 input{
     width: 100%;
     background-color: rgba(0, 0, 0, 0);
     border: 1px solid #8fe7ff;
+    outline: none;
     color: #8fe7ff;
     border-radius: 4px; /* Bo tròn góc cho ô input */
-
 }
 
 input[type="text"],
 input[type="password"] {
-    padding: 10px 0; /* Khoảng cách trong ô input */
+    width: 100%;
+    padding: 10px;
     margin-bottom: 10px; /* Khoảng cách giữa các ô input */
 }
 input[type="submit"] {

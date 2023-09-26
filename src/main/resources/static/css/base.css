@@ -59,9 +59,11 @@ section {
     display: none;
 }
 #check:checked~header .navigation {
+    background-image: url("../images/Blue & Black Futuristic Technology Facebook Cover.png");
+    background-size: cover;
+    background-position: center;
     z-index: 6;
     position: fixed;
-    background-color: green;
     top: 0;
     bottom: 0;
     left: 0;
@@ -72,9 +74,14 @@ section {
     align-items: center;
 }
 #check:checked~header .navigation a {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    width: 200px;
+    padding: 10px 60px;
+    background-color: white;
+    border: 1px solid black;
     font-weight: 700;
     margin-right: 0;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     letter-spacing: 2px;
 }
 #check:checked~header label .menu-btn {
@@ -143,7 +150,8 @@ header .logo img {
 }
 
 header .navigation a {
-    color: white;
+    text-align: center;
+    color: black;
     text-decoration: none;
     font-size: 20px;
     font-weight: 500;
@@ -154,9 +162,10 @@ header .navigation a {
     transition-property: background;
 }
 
-header .navigation a:not(:last-child) {
+/* header .navigation a:not(:last-child) {
     margin-right: 30px;
-}
+} */
+
 
 header .navigation a:hover {
     background-color: #fff;

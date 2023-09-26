@@ -55,7 +55,9 @@ public class SecurityConfig{
                                 .requestMatchers(mvcMatcherBuilder.pattern("/images/**")).permitAll()
                                 .requestMatchers(mvcMatcherBuilder.pattern("https://fonts.googleapis.com/**")).permitAll()
                                 .requestMatchers(mvcMatcherBuilder.pattern("/fonts.googleapis.com/**")).permitAll()
+                                .requestMatchers(mvcMatcherBuilder.pattern("/register")).permitAll()
                                 .requestMatchers(mvcMatcherBuilder.pattern("/")).permitAll()
+
 //                                .anyRequest().permitAll()
                                 .anyRequest().authenticated()
                 )

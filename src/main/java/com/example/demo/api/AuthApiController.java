@@ -3,7 +3,7 @@ package com.example.demo.api;
 import com.example.demo.config.jwt.JwtFilter;
 import com.example.demo.config.jwt.JwtService;
 import com.example.demo.dto.auth.ChangeAuthDto;
-import com.example.demo.dto.auth.LoginAuthDto;
+import com.example.demo.dto.auth.SigninAuthDto;
 import com.example.demo.service.UserService;
 
 import jakarta.servlet.http.HttpServletRequest;
@@ -45,7 +45,7 @@ public class AuthApiController {
     }
 
     @PostMapping("/login")
-    public ResponseEntity<?> login(@Validated @RequestBody LoginAuthDto dto){
+    public ResponseEntity<?> login(@Validated @RequestBody SigninAuthDto dto){
         return new ResponseEntity<>(userService.loginAuth(dto).getMap(), HttpStatus.OK);
     }
 

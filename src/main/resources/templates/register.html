@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:th="http://www.thymeleaf.org" layout:decorate="~{base.html}">
 
-
 <head>
     <link rel="stylesheet" th:href="@{/css/auth.css}" href="..\static\css\auth.css" type="text/css">
 </head>
@@ -12,24 +11,29 @@
             <h2>Login</h2>
             <div class="top-content-login">
                 <span>Account Info</span>
-                <a href="#">Forgot Password?</a>
             </div>
-            <form th:action="@{/login}" method="post" >
+            <form th:action="@{/register}" method="post" >
                 <div class="mb-4">
                     <input id="username" type="text" name="username" autocomplete="off" placeholder="Your Username">
                 </div>
                 <div class="mb-4">
                     <input id="password" type="password" name="password" autocomplete="off" placeholder="Your Password">
                 </div>
+                <div class="mb-4">
+                    <input id="rePassword" type="text" name="rePassword" autocomplete="off" placeholder="Your Repassword">
+                </div>
+                <div class="mb-4">
+                    <input id="email" type="text" name="email" autocomplete="off" placeholder="Your Email">
+                </div>
                 <div th:if="${param.error}" class="error">
                     Invalid username or password
                 </div>
                 <div class="mb-4">
-                    <input type="submit" value="Login">
+                    <input type="submit" value="Create Account">
                 </div>
             </form>
             <div class="extend-account">
-                <a href="/register">Create an Account</a>
+                <a href="/login">Already has an Account</a>
             </div>
         </div>
     </div>
