@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api/v1/home")
-public class TestController {
+public class TestApiController {
 
     @GetMapping("/normal")
     public ResponseEntity<?> normal(){

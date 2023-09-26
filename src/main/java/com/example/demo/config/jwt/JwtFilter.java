@@ -18,10 +18,13 @@ import java.io.IOException;
 
 @Component
 public class JwtFilter extends OncePerRequestFilter {
+    private final JwtService jwtService;
+    private final CustomUserDetailsService customUserDetailsService;
     @Autowired
-    private JwtService jwtService;
-    @Autowired
-    private CustomUserDetailsService customUserDetailsService;
+    public JwtFilter(JwtService jwtService, CustomUserDetailsService customUserDetailsService) {
+        this.jwtService = jwtService;
+        this.customUserDetailsService = customUserDetailsService;
+    }
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
@@ -39,11 +42,8 @@ public class JwtFilter extends OncePerRequestFilter {
         filterChain.doFilter(request, response);
     }
 
-    private boolean hasAuthorizationBearer(String headerAuthorization) {
-        if (headerAuthorization == null || !headerAuthorization.startsWith("Bearer")) {
-            return false;
-        }
-        return true;
+    public boolean hasAuthorizationBearer(String headerAuthorization) {
+        return headerAuthorization != null && headerAuthorization.startsWith("Bearer");
     }
 
     private void setAuthenticationContext(String token, HttpServletRequest request) {

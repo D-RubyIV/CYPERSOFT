@@ -14,6 +14,6 @@ public class ChangeAuthDto{
     @NotBlank(message = "password is required")
     private String password;
     @NotBlank(message = "new password is required")
-    private String newpassword;
+    private String newPassword;
 
 }

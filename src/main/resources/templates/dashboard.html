@@ -161,7 +161,6 @@
                         </div>
                     </div>
 
-
                 </div>
                 <div class="swiper-button-next">
                     <i class="ri-arrow-right-s-line"></i>
@@ -182,9 +181,7 @@
 
     </div>
 </body>
-
 </html>
-
 
 <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
@@ -193,16 +190,16 @@
     const progressContent = document.querySelector(".autoplay-progress span");
     var swiper = new Swiper(".mySwiper", {
         slidesPerView: 2,
-        autoplay: {
-            delay: 2500,
-            disableOnInteraction: false
-        },
-        on: {
-            autoplayTimeLeft(s, time, progress) {
-                progressCircle.style.setProperty("--progress", 1 - progress);
-                progressContent.textContent = `${Math.ceil(time / 1000)}s`;
-            }
-        },
+        // autoplay: {
+        //     delay: 2500,
+        //     disableOnInteraction: false
+        // },
+        // on: {
+        //     autoplayTimeLeft(s, time, progress) {
+        //         progressCircle.style.setProperty("--progress", 1 - progress);
+        //         progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+        //     }
+        // },
         // autoplay: true,
         // autoplayTimeout: 200,
         autoplayHoverPause: true,

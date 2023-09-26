@@ -3,7 +3,6 @@ import com.example.demo.model.UserEntity;
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
@@ -13,10 +12,9 @@ import java.util.Date;
 @Service
 @Component
 public class JwtService {
-
-    private String SECRET_KEY = "AUYUHIOJKNKMNDJSAHDASKLNDKANSDKBASUYFRTFWDEWOGJLDKSNFKSNC";
-    private static final int EXPIRED_TIME_SHORT = 3600;
-    private static final int EXPIRED_TIME_LONG = 3600 * 24;
+    private final String SECRET_KEY = "AUYUHIOJKNKMNDJSAHDASKLNDKANSDKBASUYFRTFWDEWOGJLDKSNFKSNC";
+    private static final int EXPIRED_TIME_SHORT = 3600 * 1000;
+    private static final int EXPIRED_TIME_LONG = 3600 * 24 * 1000;
 
     public String genToken(UserEntity userEntity, EXPIRED_TYPE type){
         int EXPIRED_TIME = (type == EXPIRED_TYPE.SHORT) ? EXPIRED_TIME_SHORT : EXPIRED_TIME_LONG;
@@ -40,7 +38,7 @@ public class JwtService {
             Jwts.parserBuilder().setSigningKey(getSignInKey()).build().parseClaimsJws(token);
             return true;
         }catch (Exception e){
-            System.out.printf("JWT Error -> Message: %s ", e.getMessage()); // Trả về thông báo lỗi khi chuỗi JWT claims rỗng
+            System.out.printf("JWT Error -> Message: %s ", e.getMessage());
         }
         return false;
     }
@@ -48,7 +46,6 @@ public class JwtService {
     public Date getExpired(String token) {
         return parseClaims(token).getExpiration();
     }
-
 
     public String getSubject(String token) {
         return parseClaims(token).getSubject();
