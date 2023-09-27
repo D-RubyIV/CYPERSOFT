@@ -9,14 +9,13 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class SignUpAuthDto {
-    @NotBlank(message = "username is required")
+    @NotBlank(message = "Username is required")
     private String username;
-    @NotBlank(message = "password is required")
+    @NotBlank(message = "Password is required")
     private String password;
-    @NotBlank(message = "rePassword is required")
+    @NotBlank(message = "Confirm password is required")
     private String rePassword;
-    @NotBlank(message = "email is required")
+    @NotBlank(message = "Email is required")
     private String email;
-    @NotBlank(message = "phone is required")
     private String phone;
 }

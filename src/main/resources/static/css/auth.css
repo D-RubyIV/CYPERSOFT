@@ -15,6 +15,7 @@
 
 .error{
     color: red;
+    font-size: 13px;
 }
 a{
     font-size: 14px;
@@ -58,9 +59,10 @@ input[type="text"],
 input[type="password"] {
     width: 100%;
     padding: 10px;
-    margin-bottom: 10px; /* Khoảng cách giữa các ô input */
+    margin-top: 10px; /* Khoảng cách giữa các ô input */
 }
 input[type="submit"] {
+    margin-top: 10px;
     background-color: #007bff; /* Màu nền cho nút submit */
     color: #ffffff; /* Màu chữ trong nút submit */
     padding: 10px 20px; /* Kích thước nút submit */

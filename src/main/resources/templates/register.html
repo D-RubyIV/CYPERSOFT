@@ -12,20 +12,24 @@
             <div class="top-content-login">
                 <span>Account Info</span>
             </div>
-            <form th:action="@{/register}" method="post" >
+            <form th:action="@{/register}" th:object="${user}" method="post" >
                 <div class="mb-4">
-                    <input id="username" type="text" name="username" autocomplete="off" placeholder="Your Username">
+                    <input id="username" type="text" name="username" autocomplete="off" placeholder="Your Username" th:field="*{username}">
+                    <p th:each="error: ${#fields.errors('username')}" th:text="${error}" class="error">Validation error</p>
                 </div>
                 <div class="mb-4">
-                    <input id="password" type="password" name="password" autocomplete="off" placeholder="Your Password">
+                    <input id="password" type="password" name="password" autocomplete="off" placeholder="Your Password" th:field="*{password}">
+                    <p th:each="error: ${#fields.errors('password')}" th:text="${error}" class="error">Validation error</p>
                 </div>
                 <div class="mb-4">
-                    <input id="rePassword" type="text" name="rePassword" autocomplete="off" placeholder="Your Repassword">
+                    <input id="rePassword" type="password" name="rePassword" autocomplete="off" placeholder="Your Confirm Ppassword" th:field="*{rePassword}">
+                    <p th:each="error: ${#fields.errors('rePassword')}" th:text="${error}" class="error">Validation error</p>
                 </div>
                 <div class="mb-4">
-                    <input id="email" type="text" name="email" autocomplete="off" placeholder="Your Email">
+                    <input id="email" type="text" name="email" autocomplete="off" placeholder="Your Email" th:field="*{email}">
+                    <p th:each="error: ${#fields.errors('email')}" th:text="${error}" class="error">Validation error</p>
                 </div>
-                <div th:if="${param.error}" class="error">
+                <div th:if="${message}" th:text="${message}" class="error">
                     Invalid username or password
                 </div>
                 <div class="mb-4">

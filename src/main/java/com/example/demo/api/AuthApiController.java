@@ -49,7 +49,7 @@ public class AuthApiController {
         return new ResponseEntity<>(userService.loginAuth(dto).getMap(), HttpStatus.OK);
     }
 
-     @PostMapping("/change")
+    @PostMapping("/change")
     public ResponseEntity<?> login(@Validated @RequestBody ChangeAuthDto dto){
         return new ResponseEntity<>(userService.changeAuth(dto).getMap(), HttpStatus.OK);
     }

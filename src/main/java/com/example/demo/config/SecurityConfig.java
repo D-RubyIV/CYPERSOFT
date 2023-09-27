@@ -58,8 +58,8 @@ public class SecurityConfig{
                                 .requestMatchers(mvcMatcherBuilder.pattern("/register")).permitAll()
                                 .requestMatchers(mvcMatcherBuilder.pattern("/")).permitAll()
 
-//                                .anyRequest().permitAll()
-                                .anyRequest().authenticated()
+                               .anyRequest().permitAll()
+                                // .anyRequest().authenticated()
                 )
                .formLogin(formLogin -> formLogin
                .loginPage("/login")
