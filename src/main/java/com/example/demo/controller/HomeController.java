@@ -41,6 +41,11 @@ public class HomeController {
     }
     @GetMapping("/login")
     public String getSignIn(){
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        String username = authentication.getName(); // Lấy tên người dùng đã đăng nhập
+        if(!username.equals("anonymousUser")){
+            return "redirect:/dashboard";
+        }
         return "login";
     }
     @GetMapping("/register")

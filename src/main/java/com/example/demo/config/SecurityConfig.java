@@ -57,14 +57,14 @@ public class SecurityConfig{
                                 .requestMatchers(mvcMatcherBuilder.pattern("/fonts.googleapis.com/**")).permitAll()
                                 .requestMatchers(mvcMatcherBuilder.pattern("/register")).permitAll()
                                 .requestMatchers(mvcMatcherBuilder.pattern("/")).permitAll()
-
-                               .anyRequest().permitAll()
-                                // .anyRequest().authenticated()
+//                                .anyRequest().permitAll()
+                                .anyRequest().authenticated()
                 )
                .formLogin(formLogin -> formLogin
                .loginPage("/login")
                .defaultSuccessUrl("/dashboard", true)
                .permitAll()
+
             );
         httpSecurity.addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);
         return httpSecurity.build();
